@@ -1,0 +1,14 @@
+This is the CNN+LSTM model which is trained using Ravdess dataset.
+Model has been built using Pytorch.
+Mel Spectograms
+AWDN
+
+
+This is after applying,
+# Save the scaler's mean and scale
+np.save('scaler_mean.npy', scaler.mean_)
+np.save('scaler_scale.npy', scaler.scale_)
+
+But, it doesnot give a output because of the mismatch between the shape of the mel_spectrogram 
+and the expected shape by the StandardScaler.
+I'm going to debug it and Ensure that the modelI'm loading is compatible with the scaler and input shape.Then I retrain the model as my 3rd attempt.
